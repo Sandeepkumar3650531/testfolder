@@ -1,0 +1,8 @@
+name: module build
+type: module
+description: 'hello custom module'
+core_version_requirement: ^8 || ^9
+package: custom
+dependencies:   
+- drupal:block
+configure: module_build.admin_settings

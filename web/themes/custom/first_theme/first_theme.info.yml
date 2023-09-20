@@ -1,0 +1,23 @@
+name: first Theme
+type: theme
+description: 'Custom Theme for My Website.'
+package: Other
+core_version_requirement: ^8 || ^9 
+libraries:
+  - first_theme/global-styling
+base theme: bootstrap4
+regions:
+  branding: branding
+  navigation: Main navigation
+  search: Search
+  featured: Featured
+  content: Content 
+  right_sidebar: Right sidebar
+  sidebar_second: Sidebar second 
+  footer: Footer 
+  header: header 
+  footer_bottom : footer bottom
+ 
+
+
+  

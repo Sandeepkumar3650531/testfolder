@@ -1,0 +1,59 @@
+<!-- Let's output the three variables passed to this template -->
+<!--
+<h1>My lovely twig template.</h1>
+<p>You passed this text: <b>{{ dump(variable1.title)}}</b></p>
+<p>You passed this number value: {{dump(variable2.0.title) }}</p>
+<p>And you passed this array:</p>
+-->
+	<section class="page-section" id="about"> <div class="container">
+		<div class="text-center">
+			<h2 class="section-heading text-uppercase">{{ (variable1.title)}}</h2>
+			<h3 class="section-subheading text-muted">{{ (variable1.subtitle)}}</h3>
+		</div>
+
+
+		<ul class="timeline">
+			{% for item in variable2 %}
+				{% if item.boolean == true %}
+					<li class="timeline-inverted">
+						<div class="timeline-image"><img class="rounded-circle img-fluid" src={{ item.about}} alt="..."></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>{{(item.title) }}</h4>
+								<h4 class="subheading">{{(item.subtitle) }}</h4>
+							</div>
+							<div class="timeline-body">
+								<p class="text-muted">{{(item.discription) }}</p>
+							</div>
+						</div>
+					</li>
+				{% else %}
+					<li>
+						<div class="timeline-image"><img class="rounded-circle img-fluid" src={{ item.about}} alt="..."></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4>{{(item.title) }}</h4>
+								<h4 class="subheading">{{(item.subtitle) }}</h4>
+							</div>
+							<div class="timeline-body">
+								<p class="text-muted">{{(item.discription) }}</p>
+							</div>
+						</div>
+
+
+					{% endif %}
+				{% endfor %}
+				<li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Be Part
+                                <br>
+                                Of Our
+                                <br>
+                                Story!
+                            </h4>
+                        </div>
+                    </li>
+			</ul>
+		</div>
+	</section>

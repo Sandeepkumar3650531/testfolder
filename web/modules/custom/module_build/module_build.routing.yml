@@ -1,0 +1,8 @@
+module_build.admin_settings:
+  path: '/admin/config/custom/Form'
+  defaults:
+    _form: '\Drupal\module_build\Form\module_buildForm'
+    _title:   'module_build configuration screen'
+  requirements:
+    _permission: 'administer site configuration'
+

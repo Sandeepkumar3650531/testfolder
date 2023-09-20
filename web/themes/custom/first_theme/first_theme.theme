@@ -1,0 +1,10 @@
+<?php
+
+function first_theme_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
+    //kint($variables);
+    //die;
+    if (isset($variables['elements']['content']['#block_content'])) {
+      array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+    }
+}
